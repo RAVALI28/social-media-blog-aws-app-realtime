@@ -16,10 +16,10 @@ phases:
     post_build:
       commands:
         - echo post_build
-        - mv target/social-media-blog-app-0.0.1-SNAPSHOT.jar # Move JAR to root
+        - mv target/social-media-blog-app-0.0.1-SNAPSHOT.jar application.jar # Move JAR to root
 
 artifacts:
   files:
-    - target/social-media-blog-app-0.0.1-SNAPSHOT.jar   # Ensure JAR is at root
-    - procfile          # Include Procfile (optional, see below)
+    - application.jar   # Ensure JAR is at root
+           # Include Procfile (optional, see below)
   discard-paths: yes
