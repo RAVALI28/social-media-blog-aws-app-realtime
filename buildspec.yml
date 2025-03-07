@@ -11,15 +11,14 @@ phases:
           -echo pre_build
     build:
       commands:
-        - mvn clean package
+        - mvn package
         - echo build
     post_build:
       commands:
         - echo post_build
-        - mv target/social-media-blog-app-0.0.1-SNAPSHOT.jar application.jar # Move JAR to root
 
 artifacts:
   files:
-    - application.jar   # Ensure JAR is at root
-           # Include Procfile (optional, see below)
+    - '**/*'
+    - target/social-media-blog-app-0.0.1-SNAPSHOT.jar
   discard-paths: yes
