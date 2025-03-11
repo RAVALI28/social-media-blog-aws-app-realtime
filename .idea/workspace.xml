@@ -4,11 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde425b5-9bc3-4577-b49f-e690898b4e8b" name="Changes" comment="Added git ignore to avoid to add non required files" />
+    <list default="true" id="bde425b5-9bc3-4577-b49f-e690898b4e8b" name="Changes" comment="Added git ignore to avoid to add non required files">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/PostServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/PostServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Controller/PostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Entity/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Entity/Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Service/PostService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Service/PostServiceImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/SocialMediaBlogAppApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/social-media-blog-app-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/social-media-blog-app-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spring.learning.social_media_blog_app.SocialMediaBlogAppApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.spring.learning.social_media_blog_app.SocialMediaBlogAppApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/spring/learning/social_media_blog_app/SocialMediaBlogAppApplicationTests.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,11 +57,16 @@
     &quot;accountId&quot;: &quot;025e88ae-5597-4c20-8552-dc2a01a4fdd7&quot;
   }
 }</component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2uB7xutgMlQhxp571Pxl9YeYh7v" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,11 +76,16 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.SocialMediaBlogAppApplication.executor": "Run",
     "Maven.social-media-blog-app [clean].executor": "Run",
+    "Maven.social-media-blog-app [compile].executor": "Run",
     "Maven.social-media-blog-app [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+    "git-widget-placeholder": "feature/pagination-sorting-implementation",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RunManager">

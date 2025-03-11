@@ -2,6 +2,7 @@ package com.spring.learning.social_media_blog_app.Controller;
 
 import com.spring.learning.social_media_blog_app.DTO.PostDTO;
 
+import com.spring.learning.social_media_blog_app.Payload.PostResponse;
 import com.spring.learning.social_media_blog_app.Service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -24,9 +25,13 @@ public class PostController {
 
     }
 
+    //Pagination and Sorting
     @GetMapping("/getAll")
-    public List<PostDTO> getAllPosts(){
-       return postService.getAllPosts();
+    public PostResponse getAllPosts(
+            @RequestParam(value = "pageNo", defaultValue = "0", required = false) int  pageNo,
+            @RequestParam(value = "pageSize", defaultValue = "10", required = false) int pageSize
+    ){
+       return postService.getAllPosts(pageNo, pageSize);
     }
 
 
