@@ -3,12 +3,15 @@ package com.spring.learning.social_media_blog_app.Service;
 import com.spring.learning.social_media_blog_app.DTO.PostDTO;
 import com.spring.learning.social_media_blog_app.Entity.Post;
 import com.spring.learning.social_media_blog_app.Exception.ResourceNotFoundException;
+import com.spring.learning.social_media_blog_app.Payload.PostResponse;
 import com.spring.learning.social_media_blog_app.Repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -32,12 +35,29 @@ public class PostServiceImplementation implements PostService{
     }
 
     @Override
-    public List<PostDTO> getAllPosts() {
-        List<Post> allPosts = postRepository.findAll();
+    public PostResponse getAllPosts(int pageNo, int pageSize) {
+
+        Pageable pageable = PageRequest.of(pageNo, pageSize);
+
+        //List<Post> allPosts = postRepository.findAll();
+        Page<Post> posts = postRepository.findAll(pageable);
+        List<Post> postList = posts.getContent();
 
         //Map Post Entity to Post DTO
-       List<PostDTO> postDTOList = allPosts.stream().map(post -> mapEntityToDTO(post)).collect(Collectors.toList());
-       return postDTOList;
+       //List<PostDTO> postDTOList = allPosts.stream().map(post -> mapEntityToDTO(post)).collect(Collectors.toList());
+        List<PostDTO> postDTOList = postList.stream().map(post -> mapEntityToDTO(post)).collect(Collectors.toList());
+
+        //Customize the Post Resource Response
+        PostResponse postResponse = PostResponse.builder()
+                .content(postDTOList)
+                .pageNo(posts.getNumber())
+                .pageSize(posts.getSize())
+                .totalElements(posts.getTotalElements())
+                .totalPages(posts.getTotalPages())
+                .isLastPage(posts.isLast())
+                .build();
+
+       return postResponse;
 
     }
 
