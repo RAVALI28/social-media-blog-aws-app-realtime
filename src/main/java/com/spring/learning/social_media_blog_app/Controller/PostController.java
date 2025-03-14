@@ -1,5 +1,6 @@
 package com.spring.learning.social_media_blog_app.Controller;
 
+import com.spring.learning.social_media_blog_app.DTO.PatchDTO;
 import com.spring.learning.social_media_blog_app.DTO.PostDTO;
 
 import com.spring.learning.social_media_blog_app.Payload.PostResponse;
@@ -9,7 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+
 
 @RestController
 @RequestMapping("/api/posts")
@@ -48,6 +49,13 @@ public class PostController {
     public ResponseEntity<PostDTO> updatePost(@RequestBody PostDTO postDTO, @PathVariable Long id){
         PostDTO updatedPostDTO = postService.updatePost(postDTO, id);
         return ResponseEntity.ok(updatedPostDTO);
+    }
+
+    @PatchMapping("/{id}")
+    public ResponseEntity<PostDTO> partialUpdatePost(@PathVariable long id, @RequestBody PatchDTO patchDTO){
+        PostDTO partiallyUpdatedPostDto = postService.partialUpdatePost(id, patchDTO);
+        return new ResponseEntity<>(partiallyUpdatedPostDto, HttpStatus.OK);
+
     }
 
     @DeleteMapping("/{id}")
