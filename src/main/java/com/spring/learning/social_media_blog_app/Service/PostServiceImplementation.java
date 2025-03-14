@@ -96,10 +96,10 @@ public class PostServiceImplementation implements PostService{
         }
 
         if(patchDTO.getContent() != null && !patchDTO.getContent().isEmpty()){
-            post.setTitle(patchDTO.getContent());
+            post.setContent(patchDTO.getContent());
         }
         if(patchDTO.getDescription() != null && !patchDTO.getDescription().isEmpty()){
-            post.setTitle(patchDTO.getDescription());
+            post.setDescription(patchDTO.getDescription());
         }
 
         Post partiallyUpdatedPost = postRepository.save(post);
