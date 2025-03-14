@@ -1,5 +1,6 @@
 package com.spring.learning.social_media_blog_app.Service;
 
+import com.spring.learning.social_media_blog_app.DTO.PatchDTO;
 import com.spring.learning.social_media_blog_app.DTO.PostDTO;
 import com.spring.learning.social_media_blog_app.Entity.Post;
 import com.spring.learning.social_media_blog_app.Exception.ResourceNotFoundException;
@@ -87,10 +88,35 @@ public class PostServiceImplementation implements PostService{
     }
 
     @Override
+    public PostDTO partialUpdatePost(long id, PatchDTO patchDTO) {
+        Post post = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", String.valueOf(id)));
+
+        if(patchDTO.getTitle() != null  && !patchDTO.getTitle().isEmpty()){
+            post.setTitle(patchDTO.getTitle());
+        }
+
+        if(patchDTO.getContent() != null && !patchDTO.getContent().isEmpty()){
+            post.setTitle(patchDTO.getContent());
+        }
+        if(patchDTO.getDescription() != null && !patchDTO.getDescription().isEmpty()){
+            post.setTitle(patchDTO.getDescription());
+        }
+
+        Post partiallyUpdatedPost = postRepository.save(post);
+
+        //Map Post Entity to DTO
+        PostDTO partiallyUpdatedPostDTO = mapEntityToDTO(partiallyUpdatedPost);
+        return partiallyUpdatedPostDTO;
+    }
+
+
+    @Override
     public void deletePostById(Long id) {
         Post existingPost = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("post", "id", String.valueOf(id)));
         postRepository.delete(existingPost);
     }
+
+
 
 
     //Common methods to map from Entity to DTO and DTO to Entity

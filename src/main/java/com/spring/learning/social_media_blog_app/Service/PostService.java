@@ -1,5 +1,6 @@
 package com.spring.learning.social_media_blog_app.Service;
 
+import com.spring.learning.social_media_blog_app.DTO.PatchDTO;
 import com.spring.learning.social_media_blog_app.DTO.PostDTO;
 import com.spring.learning.social_media_blog_app.Payload.PostResponse;
 
@@ -15,4 +16,5 @@ public interface PostService {
     PostDTO updatePost(PostDTO postDTO, Long id);
     void deletePostById(Long id);
 
+    PostDTO partialUpdatePost(long id, PatchDTO patchDTO);
 }
