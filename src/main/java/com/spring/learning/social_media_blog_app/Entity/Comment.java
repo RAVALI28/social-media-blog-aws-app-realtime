@@ -16,10 +16,13 @@ public class Comment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     private String name;
+
     private String email;
+
+    @Column(columnDefinition = "TEXT")
     private String body;
 
     //mapping between Comments to Post- Many to one mapping
@@ -28,4 +31,14 @@ public class Comment {
     @JoinColumn(name = "post_Id", nullable = false)
     private Post post;
 
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", body='" + body + '\'' +
+                ", post=" + post +
+                '}';
+    }
 }
