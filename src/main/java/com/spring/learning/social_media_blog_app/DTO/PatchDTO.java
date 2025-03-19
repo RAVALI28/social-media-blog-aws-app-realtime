@@ -6,8 +6,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class PatchDTO {
-     private String title;
-     private String content;
-     private String description;
+     private String Operation;
+     private String Key;
+     private String Value;
 
 }

@@ -6,18 +6,28 @@
   <component name="ChangeListManager">
     <list default="true" id="bde425b5-9bc3-4577-b49f-e690898b4e8b" name="Changes" comment="Added git ignore to avoid to add non required files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/DTO/CommentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/DTO/CommentDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Entity/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Repository/CommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/DTO/PatchDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/DTO/PatchDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Entity/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Exception/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Exception/ResourceNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/CommentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/CommentServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/CommentServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/PostServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/PostServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/SocialMediaBlogAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/SocialMediaBlogAppApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Controller/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/DTO/CommentDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/DTO/CommentDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Entity/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Entity/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Repository/CommentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Repository/CommentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/DTO/PatchDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/DTO/PatchDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Exception/ResourceNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Exception/ResourceNotFoundException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Service/CommentService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Service/CommentServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Service/CommentServiceImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Service/PostServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Service/PostServiceImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/SocialMediaBlogAppApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/SocialMediaBlogAppApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/social-media-blog-app-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/social-media-blog-app-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/social-media-blog-app-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/social-media-blog-app-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +79,7 @@
     "Maven.social-media-blog-app [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/allother-mappings-comment-resource-implementation",
+    "git-widget-placeholder": "feature/Spring-security-and-validation-implementation",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
@@ -166,14 +176,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added git ignore to avoid to add non required files" />
     <MESSAGE value="updated Patch mapping in post resource" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated Patch mapping in post resource" />
+    <MESSAGE value="updated patch implementation in post resource" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated patch implementation in post resource" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/CommentServiceImplementation.java</url>
-          <line>60</line>
+          <line>83</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>

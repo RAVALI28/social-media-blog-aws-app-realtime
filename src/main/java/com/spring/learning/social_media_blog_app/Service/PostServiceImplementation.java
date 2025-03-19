@@ -6,6 +6,7 @@ import com.spring.learning.social_media_blog_app.Entity.Post;
 import com.spring.learning.social_media_blog_app.Exception.ResourceNotFoundException;
 import com.spring.learning.social_media_blog_app.Payload.PostResponse;
 import com.spring.learning.social_media_blog_app.Repository.PostRepository;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -21,6 +22,9 @@ public class PostServiceImplementation implements PostService{
 
     @Autowired
     private PostRepository postRepository;
+
+    @Autowired
+    private ModelMapper modelMapper;
 
     @Override
     public PostDTO createPost(PostDTO postDTO) {
@@ -89,25 +93,19 @@ public class PostServiceImplementation implements PostService{
 
     @Override
     public PostDTO partialUpdatePost(long id, PatchDTO patchDTO) {
-        Post post = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", String.valueOf(id)));
+        //Fetch post from post repository using id
+        Post postEntity = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", String.valueOf(id)));
 
-        if(patchDTO.getTitle() != null  && !patchDTO.getTitle().isEmpty()){
-            post.setTitle(patchDTO.getTitle());
-        }
+        partiallyUpdatePostEntity(patchDTO, postEntity);
 
-        if(patchDTO.getContent() != null && !patchDTO.getContent().isEmpty()){
-            post.setContent(patchDTO.getContent());
-        }
-        if(patchDTO.getDescription() != null && !patchDTO.getDescription().isEmpty()){
-            post.setDescription(patchDTO.getDescription());
-        }
-
-        Post partiallyUpdatedPost = postRepository.save(post);
+        Post partiallyUpdatedPostEntity = postRepository.save(postEntity);
 
         //Map Post Entity to DTO
-        PostDTO partiallyUpdatedPostDTO = mapEntityToDTO(partiallyUpdatedPost);
+        PostDTO partiallyUpdatedPostDTO = mapEntityToDTO(partiallyUpdatedPostEntity);
         return partiallyUpdatedPostDTO;
     }
+
+
 
 
     @Override
@@ -121,10 +119,13 @@ public class PostServiceImplementation implements PostService{
 
     //Common methods to map from Entity to DTO and DTO to Entity
     private Post mapDTOToEntity(PostDTO postDTO) {
-        Post post = new Post();
-        post.setTitle(postDTO.getTitle());
-        post.setDescription(postDTO.getDescription());
-        post.setContent(postDTO.getContent());
+        //Using Model Maper to map one object to another
+        Post post = modelMapper.map(postDTO, Post.class);
+
+//        Post post = new Post();
+//        post.setTitle(postDTO.getTitle());
+//        post.setDescription(postDTO.getDescription());
+//        post.setContent(postDTO.getContent());
         return post;
 
     }
@@ -132,12 +133,33 @@ public class PostServiceImplementation implements PostService{
 
 
     private PostDTO mapEntityToDTO(Post post) {
-        PostDTO postDTO = new PostDTO();
-        postDTO.setId(post.getId());
-        postDTO.setTitle(post.getTitle());
-        postDTO.setDescription(post.getDescription());
-        postDTO.setContent(post.getContent());
+
+        //Using Model Maper to map one object to another
+        PostDTO postDTO = modelMapper.map(post, PostDTO.class);
+
+//        PostDTO postDTO = new PostDTO();
+//        postDTO.setId(post.getId());
+//        postDTO.setTitle(post.getTitle());
+//        postDTO.setDescription(post.getDescription());
+//        postDTO.setContent(post.getContent());
         return postDTO;
+    }
+
+
+    private void partiallyUpdatePostEntity(PatchDTO patchDTO, Post post) {
+
+        String key = patchDTO.getKey();
+        switch (key) {
+            case "Title" :
+                post.setTitle(patchDTO.getValue());
+                break;
+            case "Content" :
+                post.setContent(patchDTO.getValue());
+                break;
+            case "Description" :
+                post.setDescription(patchDTO.getValue());
+                break;
+        }
     }
 
 
