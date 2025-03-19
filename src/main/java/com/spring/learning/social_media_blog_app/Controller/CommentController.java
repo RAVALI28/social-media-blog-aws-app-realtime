@@ -1,7 +1,10 @@
 package com.spring.learning.social_media_blog_app.Controller;
 
+import com.github.fge.jsonpatch.JsonPatch;
 import com.spring.learning.social_media_blog_app.DTO.CommentDTO;
+import com.spring.learning.social_media_blog_app.DTO.PatchDTO;
 import com.spring.learning.social_media_blog_app.Service.CommentService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +14,7 @@ import java.util.*;
 
 @RestController
 @RequestMapping("/api/v1")
+@Tag(name = "SOCIAL MEDIA COMMENT RESOURCE CRUD REST APIs")
 public class CommentController {
 
     @Autowired
@@ -46,13 +50,26 @@ public class CommentController {
     }
 
     //Update partial part of comment - /api/posts/{postId}/comments/{id}
-    @PatchMapping("/posts/{postId}/comments/{id}")
-    public ResponseEntity<CommentDTO> updatePartiallyCommentByPostIdAndCommentId(@PathVariable Long postId, @PathVariable Long id, @RequestBody CommentDTO commentDTO){
-        commentService.updatePartiallyCommentByPostIdAndCommentId(postId, id, commentDTO);
-        return null;
-
+   // @PatchMapping("/posts/{postId}/comments/{id}")
+    public ResponseEntity<CommentDTO> updatePartiallyCommentByPostIdAndCommentId(@PathVariable("postId") Long postId, @PathVariable("id") Long id, @RequestBody PatchDTO patchDTO){
+        CommentDTO partiallyUpdatedDTO = null;
+        if(patchDTO.getOperation().equalsIgnoreCase("update")) {
+            partiallyUpdatedDTO = commentService.updatePartiallyCommentByPostIdAndCommentId(postId, id, patchDTO);
+        } else if (patchDTO.getOperation().equalsIgnoreCase("delete")) {
+           // partiallyUpdatedDTO = commentService.deleteParticularField(postId, id, patchDTO);
+        }
+        return new ResponseEntity<>(partiallyUpdatedDTO, HttpStatus.OK);
     }
 
+    @PatchMapping("/posts/{postId}/comments/{id}")
+    public ResponseEntity<CommentDTO> updatePartiallyCommentByPostIdAndCommentIdUsingJsonPatchLib(@PathVariable("postId") Long postId,
+            @PathVariable("id") Long id,
+            @RequestBody JsonPatch jsonPatch
+        ){
+           CommentDTO partiallyUpdatedDTO = commentService.updatePartiallyCommentByPostIdAndCommentIdUsingJsonPatch(postId, id, jsonPatch);
+
+        return new ResponseEntity<>(partiallyUpdatedDTO, HttpStatus.OK);
+    }
 
     @DeleteMapping("/posts/{postId}/comments/{id}")
     public ResponseEntity<String> deleteCommentByPostIdAndCommentId(@PathVariable("postId") Long postId, @PathVariable("id") Long id){
