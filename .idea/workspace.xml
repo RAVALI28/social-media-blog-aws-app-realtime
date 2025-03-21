@@ -7,11 +7,11 @@
     <list default="true" id="bde425b5-9bc3-4577-b49f-e690898b4e8b" name="Changes" comment="Added Global exception handler implementation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample-file.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Controller/CommentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Controller/PostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/DTO/CommentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/DTO/CommentDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/DTO/PostDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/DTO/PostDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/SocialMediaBlogAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/SocialMediaBlogAppApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +63,7 @@
     "Maven.social-media-blog-app [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/spring-security-impllementation",
+    "git-widget-placeholder": "feature/adding-validation-and-modelMapperConfigClass",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
@@ -177,7 +177,8 @@
     <MESSAGE value="Added git ignore to avoid to add non required files" />
     <MESSAGE value="updated Patch mapping in post resource" />
     <MESSAGE value="updated patch implementation in post resource" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated patch implementation in post resource" />
+    <MESSAGE value="Added basic spring security implementation and also securing the method level APIS using preAuthorize and other annotations." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added basic spring security implementation and also securing the method level APIS using preAuthorize and other annotations." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

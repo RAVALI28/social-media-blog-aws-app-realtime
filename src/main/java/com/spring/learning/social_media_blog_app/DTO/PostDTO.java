@@ -1,5 +1,7 @@
 package com.spring.learning.social_media_blog_app.DTO;
 
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,39 +10,17 @@ import lombok.Setter;
 public class PostDTO {
 
     private Long id;
+
+    //Min 5 characters is needed
+    //Should not be null
+    @NotEmpty
+    @Size(min = 5, message = "Post title should have at least 5 characters", max = 100)
     private String title;
+
+    @Size(min = 10, message = "Post description should have at least 10 characters")
     private String description;
+
+    @NotEmpty
     private String content;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
 }

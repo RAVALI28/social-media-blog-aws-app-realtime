@@ -5,6 +5,7 @@ import com.spring.learning.social_media_blog_app.DTO.PostDTO;
 
 import com.spring.learning.social_media_blog_app.Payload.PostResponse;
 import com.spring.learning.social_media_blog_app.Service.PostService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,8 +22,8 @@ public class PostController {
     private PostService postService;
 
     @PostMapping("/create")
-   @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<PostDTO> createPost(@RequestBody PostDTO postDTO){
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<PostDTO> createPost(@Valid @RequestBody PostDTO postDTO){
         PostDTO savedPostDto = postService.createPost(postDTO);
         return new ResponseEntity<>(savedPostDto, HttpStatus.CREATED);
 
@@ -49,14 +50,16 @@ public class PostController {
 
     @PutMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<PostDTO> updatePost(@RequestBody PostDTO postDTO, @PathVariable Long id){
+    public ResponseEntity<PostDTO> updatePost(@Valid @RequestBody PostDTO postDTO,
+                                              @PathVariable Long id){
         PostDTO updatedPostDTO = postService.updatePost(postDTO, id);
         return ResponseEntity.ok(updatedPostDTO);
     }
 
     @PatchMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<PostDTO> partialUpdatePost(@PathVariable long id, @RequestBody PatchDTO patchDTO){
+    public ResponseEntity<PostDTO> partialUpdatePost(@PathVariable long id,
+                                                     @RequestBody PatchDTO patchDTO){
         PostDTO partiallyUpdatedPostDto = postService.partialUpdatePost(id, patchDTO);
         return new ResponseEntity<>(partiallyUpdatedPostDto, HttpStatus.OK);
 
