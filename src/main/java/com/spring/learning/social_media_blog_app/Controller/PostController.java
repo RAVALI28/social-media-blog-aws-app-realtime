@@ -8,6 +8,7 @@ import com.spring.learning.social_media_blog_app.Service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -20,6 +21,7 @@ public class PostController {
     private PostService postService;
 
     @PostMapping("/create")
+   @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<PostDTO> createPost(@RequestBody PostDTO postDTO){
         PostDTO savedPostDto = postService.createPost(postDTO);
         return new ResponseEntity<>(savedPostDto, HttpStatus.CREATED);
@@ -46,12 +48,14 @@ public class PostController {
 
 
     @PutMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<PostDTO> updatePost(@RequestBody PostDTO postDTO, @PathVariable Long id){
         PostDTO updatedPostDTO = postService.updatePost(postDTO, id);
         return ResponseEntity.ok(updatedPostDTO);
     }
 
     @PatchMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<PostDTO> partialUpdatePost(@PathVariable long id, @RequestBody PatchDTO patchDTO){
         PostDTO partiallyUpdatedPostDto = postService.partialUpdatePost(id, patchDTO);
         return new ResponseEntity<>(partiallyUpdatedPostDto, HttpStatus.OK);
@@ -59,6 +63,7 @@ public class PostController {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<String> deletePostById(@PathVariable Long id){
         postService.deletePostById(id);
         return ResponseEntity.ok("Post successfully deleted ::" +id);
