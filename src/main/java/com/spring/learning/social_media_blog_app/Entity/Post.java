@@ -31,6 +31,7 @@ public class Post {
     @Column(name = "content")
     private String content;
 
+
     //Relationship between Post to Comments - One to Many mapping
 
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true)

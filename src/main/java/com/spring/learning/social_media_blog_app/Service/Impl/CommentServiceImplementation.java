@@ -1,4 +1,4 @@
-package com.spring.learning.social_media_blog_app.Service;
+package com.spring.learning.social_media_blog_app.Service.Impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -13,6 +13,7 @@ import com.spring.learning.social_media_blog_app.Exception.BlogAPIException;
 import com.spring.learning.social_media_blog_app.Exception.ResourceNotFoundException;
 import com.spring.learning.social_media_blog_app.Repository.CommentRepository;
 import com.spring.learning.social_media_blog_app.Repository.PostRepository;
+import com.spring.learning.social_media_blog_app.Service.CommentService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,7 +23,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
-public class CommentServiceImplementation implements CommentService{
+public class CommentServiceImplementation implements CommentService {
 
 
     @Autowired
