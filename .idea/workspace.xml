@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde425b5-9bc3-4577-b49f-e690898b4e8b" name="Changes" comment="Added validation dependency and required annotation for the controller classes">
+    <list default="true" id="bde425b5-9bc3-4577-b49f-e690898b4e8b" name="Changes" comment="Added JDBC Database Authentication">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Entity/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/CommentServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/Impl/CommentServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/PostServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/Impl/PostServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Entity/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Entity/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Service/CommentServiceImplementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Service/PostServiceImplementation.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +185,23 @@
       <option name="project" value="LOCAL" />
       <updated>1742580488721</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added JDBC Database Authentication">
+      <option name="closed" value="true" />
+      <created>1743020362843</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743020362843</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added JDBC Database Authentication">
+      <option name="closed" value="true" />
+      <created>1743020374960</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1743020374960</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,7 +221,8 @@
     <MESSAGE value="updated patch implementation in post resource" />
     <MESSAGE value="Added basic spring security implementation and also securing the method level APIS using preAuthorize and other annotations." />
     <MESSAGE value="Added validation dependency and required annotation for the controller classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added validation dependency and required annotation for the controller classes" />
+    <MESSAGE value="Added JDBC Database Authentication" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added JDBC Database Authentication" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
