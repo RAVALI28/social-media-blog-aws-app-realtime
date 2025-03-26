@@ -1,4 +1,4 @@
-package com.spring.learning.social_media_blog_app.Service;
+package com.spring.learning.social_media_blog_app.Service.Impl;
 
 import com.spring.learning.social_media_blog_app.DTO.PatchDTO;
 import com.spring.learning.social_media_blog_app.DTO.PostDTO;
@@ -6,6 +6,7 @@ import com.spring.learning.social_media_blog_app.Entity.Post;
 import com.spring.learning.social_media_blog_app.Exception.ResourceNotFoundException;
 import com.spring.learning.social_media_blog_app.Payload.PostResponse;
 import com.spring.learning.social_media_blog_app.Repository.PostRepository;
+import com.spring.learning.social_media_blog_app.Service.PostService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -18,7 +19,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class PostServiceImplementation implements PostService{
+public class PostServiceImplementation implements PostService {
 
     @Autowired
     private PostRepository postRepository;

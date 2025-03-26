@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde425b5-9bc3-4577-b49f-e690898b4e8b" name="Changes" comment="Added Global exception handler implementation" />
+    <list default="true" id="bde425b5-9bc3-4577-b49f-e690898b4e8b" name="Changes" comment="Added validation dependency and required annotation for the controller classes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Entity/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/CommentServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/Impl/CommentServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/PostServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/Impl/PostServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Entity/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Entity/Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Service/CommentServiceImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Service/PostServiceImplementation.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -49,13 +60,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.EncodingDecondingUtility.executor": "Run",
     "Application.SocialMediaBlogAppApplication.executor": "Run",
     "Maven.social-media-blog-app [clean].executor": "Run",
     "Maven.social-media-blog-app [compile].executor": "Run",
     "Maven.social-media-blog-app [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/login-register-api-implementation",
+    "git-widget-placeholder": "feature/jdbc-authentication-authorization-implementation",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
@@ -63,7 +75,20 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.SocialMediaBlogAppApplication">
+    <configuration name="EncodingDecondingUtility" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.spring.learning.social_media_blog_app.Utills.EncodingDecondingUtility" />
+      <module name="social-media-blog-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.spring.learning.social_media_blog_app.Utills.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SocialMediaBlogAppApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.spring.learning.social_media_blog_app.SocialMediaBlogAppApplication" />
       <module name="social-media-blog-app" />
@@ -91,6 +116,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.SocialMediaBlogAppApplication" />
+        <item itemvalue="Application.EncodingDecondingUtility" />
       </list>
     </recent_temporary>
   </component>
@@ -186,13 +212,14 @@
     <MESSAGE value="updated Patch mapping in post resource" />
     <MESSAGE value="updated patch implementation in post resource" />
     <MESSAGE value="Added basic spring security implementation and also securing the method level APIS using preAuthorize and other annotations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added basic spring security implementation and also securing the method level APIS using preAuthorize and other annotations." />
+    <MESSAGE value="Added validation dependency and required annotation for the controller classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added validation dependency and required annotation for the controller classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/CommentServiceImplementation.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/Impl/CommentServiceImplementation.java</url>
           <line>83</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
