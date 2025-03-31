@@ -28,11 +28,12 @@ public class SocialMediaCustomizedUserDetailsService implements UserDetailsServi
         UserEntity user = userRepository.findByUsernameOrEmail(usernameOrEmail, usernameOrEmail)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found with Email or Username::" +usernameOrEmail));
 
+        //Converted User roles to Granted Authorities
         Set<GrantedAuthority> grantedAuthorities = user
                 .getRoles().stream().map(roleEntity -> new SimpleGrantedAuthority(roleEntity.getName())).collect(Collectors.toSet());
 
 
-
+        //Returing Spring Specific user with username, password and granted authority
         return new User(user.getEmail(), user.getPassword(), grantedAuthorities);
     }
 }
