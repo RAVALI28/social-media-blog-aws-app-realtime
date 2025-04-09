@@ -5,6 +5,8 @@ import com.spring.learning.social_media_blog_app.DTO.PostDTO;
 
 import com.spring.learning.social_media_blog_app.Payload.PostResponse;
 import com.spring.learning.social_media_blog_app.Service.PostService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,6 +18,9 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/posts")
+@Tag(
+        name = "SOCIAL MEDIA BLOG APP POST RESOURCE REST CRUD APIs"
+)
 public class PostController {
 
     @Autowired
@@ -23,6 +28,7 @@ public class PostController {
 
     @PostMapping("/create")
     @PreAuthorize("hasRole('ADMIN')")
+    @SecurityRequirement( name = "Bearer Authentication")
     public ResponseEntity<PostDTO> createPost(@Valid @RequestBody PostDTO postDTO){
         PostDTO savedPostDto = postService.createPost(postDTO);
         return new ResponseEntity<>(savedPostDto, HttpStatus.CREATED);
