@@ -1,5 +1,6 @@
 package com.spring.learning.social_media_blog_app.Controller;
 
+import com.spring.learning.social_media_blog_app.DTO.JWTAuthResponse;
 import com.spring.learning.social_media_blog_app.DTO.LoginDTO;
 import com.spring.learning.social_media_blog_app.DTO.RegisterDTO;
 import com.spring.learning.social_media_blog_app.Service.AuthService;
@@ -20,9 +21,13 @@ public class AuthController {
 
     //HTTP POST - "/login", "/signin"
     @PostMapping(value = { "/signin", "/login" })
-    public ResponseEntity<String> login(@RequestBody LoginDTO loginDTO){
-        String response = authService.login(loginDTO);
-        return new ResponseEntity<>(response, HttpStatus.OK);
+    public ResponseEntity<JWTAuthResponse> login(@RequestBody LoginDTO loginDTO){
+        String token = authService.login(loginDTO);
+
+        JWTAuthResponse jwtAuthResponse = new JWTAuthResponse();
+        jwtAuthResponse.setAccessToken(token);
+
+        return new ResponseEntity<>(jwtAuthResponse, HttpStatus.OK);
 
     }
 

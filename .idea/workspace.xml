@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde425b5-9bc3-4577-b49f-e690898b4e8b" name="Changes" comment="Added JDBC Database Authentication">
+    <list default="true" id="bde425b5-9bc3-4577-b49f-e690898b4e8b" name="Changes" comment="Added Login and signup implementation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/Impl/SocialMediaCustomizedUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/Impl/SocialMediaCustomizedUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/learning/social_media_blog_app/Config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/Impl/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/Service/Impl/AuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/SocialMediaBlogAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/learning/social_media_blog_app/SocialMediaBlogAppApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,25 +56,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Application.EncodingDecondingUtility.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SocialMediaBlogAppApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.social-media-blog-app [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.social-media-blog-app [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.social-media-blog-app [install].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/Login-SignUp-Implementation&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Apps/springMVC/springMVC&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.EncodingDecondingUtility.executor": "Run",
+    "Application.SocialMediaBlogAppApplication.executor": "Debug",
+    "Maven.social-media-blog-app [clean].executor": "Run",
+    "Maven.social-media-blog-app [compile].executor": "Run",
+    "Maven.social-media-blog-app [install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "feature/JWT__implementation",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/raval/IdeaProjects/soapSpringBootExample",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.SocialMediaBlogAppApplication">
     <configuration name="EncodingDecondingUtility" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.spring.learning.social_media_blog_app.Utills.EncodingDecondingUtility" />
@@ -189,7 +193,23 @@
       <option name="project" value="LOCAL" />
       <updated>1742580488721</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added Login and signup implementation">
+      <option name="closed" value="true" />
+      <created>1743440327774</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743440327774</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added Login and signup implementation">
+      <option name="closed" value="true" />
+      <created>1743440346776</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1743440346776</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -209,7 +229,8 @@
     <MESSAGE value="updated patch implementation in post resource" />
     <MESSAGE value="Added basic spring security implementation and also securing the method level APIS using preAuthorize and other annotations." />
     <MESSAGE value="Added validation dependency and required annotation for the controller classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added validation dependency and required annotation for the controller classes" />
+    <MESSAGE value="Added Login and signup implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Login and signup implementation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

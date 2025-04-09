@@ -1,5 +1,7 @@
 package com.spring.learning.social_media_blog_app.Config;
 
+import com.spring.learning.social_media_blog_app.Security.JWTAuthenticationEntryPoint;
+import com.spring.learning.social_media_blog_app.Security.JwtAuthenticationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +18,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 
@@ -26,6 +29,12 @@ public class SecurityConfig {
 
     @Autowired
     private UserDetailsService userDetailsService;
+
+    @Autowired
+    private JwtAuthenticationFilter jwtAuthenticationFilter;
+
+    @Autowired
+    private JWTAuthenticationEntryPoint jwtAuthenticationEntryPoint;
 
 
     @Bean
@@ -44,10 +53,19 @@ public class SecurityConfig {
 
         http
                 .csrf(csrf -> csrf.disable())
+
+
                 //the below one allows us to access the GET API call without any authentication
-                //.authorizeHttpRequests(authorize -> authorize.requestMatchers(HttpMethod.GET, "/api/**").permitAll())
-                .authorizeHttpRequests(authorize -> authorize.anyRequest().authenticated())
-                .httpBasic(Customizer.withDefaults());
+                .authorizeHttpRequests(authorize -> authorize
+                        //.requestMatchers(HttpMethod.GET, "/api/**").permitAll())
+                      .requestMatchers("/api/auth/**").permitAll()
+                .anyRequest().authenticated())
+                .exceptionHandling(exception -> exception.authenticationEntryPoint(jwtAuthenticationEntryPoint));
+
+
+              //  .httpBasic(Customizer.withDefaults());
+
+        http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }

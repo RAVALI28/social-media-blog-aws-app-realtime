@@ -8,6 +8,7 @@ import com.spring.learning.social_media_blog_app.Entity.UserEntity;
 import com.spring.learning.social_media_blog_app.Exception.BlogAPIException;
 import com.spring.learning.social_media_blog_app.Repository.RoleRepository;
 import com.spring.learning.social_media_blog_app.Repository.UserRepository;
+import com.spring.learning.social_media_blog_app.Security.JwtTokenUtility;
 import com.spring.learning.social_media_blog_app.Service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -37,13 +38,20 @@ public class AuthServiceImpl implements AuthService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    private JwtTokenUtility jwtTokenUtility;
+
     @Override
     public String login(LoginDTO loginDTO) {
         //Authenticate the User using Authentication Manager
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginDTO.getUsernameOrEmail(), loginDTO.getPassword()));
         //Set the Authentication object into Security Context Holder
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        return "User Logged In Successfully";
+
+
+        String jwtToken = jwtTokenUtility.generateJwtToken(authentication);
+
+        return jwtToken;
     }
 
     @Override
